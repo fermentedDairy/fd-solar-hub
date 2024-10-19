@@ -1,0 +1,21 @@
+micronaut:
+  application:
+    name: fd-solar-hub
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    dialect: POSTGRES
+mqtt.client.client-id: ${random.uuid}
+flyway:
+  datasources:
+    default:
+      enabled: true

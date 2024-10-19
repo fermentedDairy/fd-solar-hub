@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: org.fermented.dairy
+testFramework: kotest
+sourceLanguage: kotlin
+buildTool: gradle_kotlin
+features: [ app-name, data, data-jdbc, flyway, gradle, hibernate-validator, http-client-test, jdbc-hikari, kotest, kotlin, kotlin-application, ksp, logback, micronaut-aot, micronaut-build, micronaut-http-validation, mqtt, mqttv3, netty-server, openapi, postgres, readme, serialization-jackson, shade, static-resources, swagger-ui, test-resources, yaml, yaml-build ]

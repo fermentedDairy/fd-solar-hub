@@ -1,4 +1,4 @@
-package org.fermented.dairy.entity.entities
+package org.fermented.dairy.entity
 
 import java.time.OffsetDateTime
 import io.micronaut.data.annotation.Id

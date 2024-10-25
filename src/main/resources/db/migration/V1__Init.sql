@@ -5,11 +5,11 @@ create table config (
                         value text
 );
 
-create table solarData (
+create table solar_data (
                            id uuid,
                            time timestamptz not null default now(),
                            topic text not null,
                            value text not null
 );
 
-select public.create_hypertable('solarData', 'time');
+select public.create_hypertable('solar_data', 'time');

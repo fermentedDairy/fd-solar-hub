@@ -3,8 +3,8 @@ package org.fermented.dairy.boundary.mqtt
 import io.micronaut.mqtt.annotation.MqttSubscriber
 import io.micronaut.mqtt.annotation.Topic
 import io.github.oshai.kotlinlogging.KotlinLogging
-import org.fermented.dairy.entity.entities.SolarData
-import org.fermented.dairy.entity.repository.SolarDataRepository
+import org.fermented.dairy.entity.SolarData
+import org.fermented.dairy.entity.SolarDataRepository
 import org.fermented.dairy.entity.util.createV7UUID
 import java.time.OffsetDateTime
 

@@ -62,7 +62,7 @@ micronaut {
         annotations("org.fermented.dairy.*")
     }
     testResources {
-        sharedServer = true
+        sharedServer = false
     }
     aot {
         // Please review carefully the optimizations enabled below

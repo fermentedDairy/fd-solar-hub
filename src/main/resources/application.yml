@@ -14,8 +14,24 @@ datasources:
     driver-class-name: org.postgresql.Driver
     db-type: postgres
     dialect: POSTGRES
-mqtt.client.client-id: ${random.uuid}
+mqtt:
+  client:
+    server-uri: tcp://${mqtt.host}:${mqtt.port}
+    client-id: ${random.uuid}
 flyway:
   datasources:
     default:
       enabled: true
+test-resources:
+  containers:
+    mosquitto:
+      image-name: eclipse-mosquitto
+      hostnames:
+        - mqtt.host
+      exposed-ports:
+        - mqtt.port: 1883
+      ro-fs-bind:
+        - "src/test/resources/mosquitto.conf": /mosquitto/config/mosquitto.conf
+    postgres:
+      image-name: timescale/timescaledb:latest-pg16
+

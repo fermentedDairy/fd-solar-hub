@@ -6,7 +6,7 @@ create table config (
 );
 
 create table solarData (
-                           id uuid primary key,
+                           id uuid,
                            time timestamptz not null default now(),
                            topic text not null,
                            value text not null

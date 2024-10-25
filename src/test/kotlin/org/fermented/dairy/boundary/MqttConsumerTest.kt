@@ -10,6 +10,7 @@ import io.micronaut.test.extensions.kotest5.annotation.MicronautTest
 import jakarta.inject.Inject
 import org.fermented.dairy.entity.SolarDataRepository
 
+@Suppress("unused", "unused", "unused")
 @MicronautTest
 class MqttConsumerTest (
     @Inject var publisher: TestPublisher,

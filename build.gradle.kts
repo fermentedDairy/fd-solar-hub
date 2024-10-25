@@ -11,7 +11,10 @@ plugins {
 version = "0.1"
 group = "org.fermented.dairy"
 
-val kotlinVersion = project.properties.get("kotlinVersion")
+val kotlinVersion = project.properties["kotlinVersion"]
+val kotlinLoggingVersion = project.properties["kotlinLoggingVersion"]
+val jacksonUUIDGeneratorVersion = project.properties["jacksonUUIDGeneratorVersion"]
+
 repositories {
     mavenCentral()
 }
@@ -30,8 +33,8 @@ dependencies {
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
-    implementation("io.github.oshai:kotlin-logging-jvm:7.0.0")
-    implementation("com.fasterxml.uuid:java-uuid-generator:5.1.0")
+    implementation("io.github.oshai:kotlin-logging-jvm:${kotlinLoggingVersion}")
+    implementation("com.fasterxml.uuid:java-uuid-generator:${jacksonUUIDGeneratorVersion}")
     compileOnly("io.micronaut:micronaut-http-client")
     compileOnly("io.micronaut.openapi:micronaut-openapi-annotations")
     runtimeOnly("ch.qos.logback:logback-classic")

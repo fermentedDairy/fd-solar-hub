@@ -1,6 +1,8 @@
 micronaut:
   application:
     name: fd-solar-hub
+  server:
+    context-path: /fd-solar-hub
   router:
     static-resources:
       swagger:

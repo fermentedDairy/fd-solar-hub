@@ -14,7 +14,7 @@ class MqttConsumer (private val solarDataRepository: SolarDataRepository){
 
     @Topic("#")
     fun consume(@Topic topic: String, message: String) {
-        logger.info { "Topic: $topic, Message: $message" }
+        logger.debug { "Topic: $topic, Message: $message" }
         val solarData = SolarData(createV7UUID(), OffsetDateTime.now(), topic, message)
         solarDataRepository.save(solarData)
     }

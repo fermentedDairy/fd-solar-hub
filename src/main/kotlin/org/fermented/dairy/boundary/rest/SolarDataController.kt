@@ -16,7 +16,7 @@ import java.util.stream.Stream
 
 @Controller("/solar-data")
 @Secured(SecurityRule.IS_ANONYMOUS)
-open class FdSolarHubController (
+open class SolarDataController (
     @Inject private val solarDataRepository: SolarDataRepository
 ){
 

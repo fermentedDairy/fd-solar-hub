@@ -10,10 +10,7 @@ import io.swagger.v3.oas.annotations.info.*
         version = "0.0"
     )
 )
-object Api {
-}
+object Api
 
-fun main(args: Array<String>) {
-    run(*args)
-}
+fun main(args: Array<String>) = run(*args)
 

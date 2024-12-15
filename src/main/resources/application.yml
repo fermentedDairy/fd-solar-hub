@@ -11,6 +11,9 @@ micronaut:
       swagger-ui:
         paths: classpath:META-INF/swagger/views/swagger-ui
         mapping: /swagger-ui/**
+  caches:
+    config:
+      expireAfterWrite: 30m
 datasources:
   default:
     driver-class-name: org.postgresql.Driver
@@ -36,4 +39,3 @@ test-resources:
         - "src/test/resources/mosquitto.conf": /mosquitto/config/mosquitto.conf
     postgres:
       image-name: timescale/timescaledb:latest-pg16
-
